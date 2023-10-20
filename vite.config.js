@@ -9,5 +9,8 @@ export default defineConfig({
     setupFiles: ["./configs/vitest/setup.js"],
     testMatch: ["./src/components/*.test.jsx"],
     globals: true,
+    coverage: {
+      reporter: ["text"],
+    },
   },
 });
