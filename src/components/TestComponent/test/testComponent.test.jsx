@@ -18,9 +18,11 @@ describe("TestComponent", () => {
   });
 
   it("isClicked is displayed when button is clicked", async () => {
-    const button = screen.getByRole("button", { name: /bouton/i });
+    const button = screen.getByRole("button", {
+      name: /common:display.the.text/i,
+    });
     await userEvent.click(button);
-    const isClicked = screen.getByText(/isclicked/i);
+    const isClicked = screen.getByText(/lorem ipsum/i);
     expect(isClicked).toBeInTheDocument();
     await userEvent.click(button);
     expect(isClicked).not.toBeInTheDocument();

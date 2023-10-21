@@ -2,6 +2,7 @@ import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 import { ThemeProvider } from "@emotion/react";
 import theme from "../../src/theme";
 import "../../normalize.css";
+import "../../services/i18next/initTranslation";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
